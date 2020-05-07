@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <style>
+            body{
+                margin: 0;
+                background-color:whitesmoke;
+            }
+           
+        </style>
+         <!-- <script src="https://kit.fontawesome.com/b2208ecd95.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h2 id="page-heading">My Contact List</h2>
+      <div id="contact-submit">
+
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter phone number" required>
+            <button type="submit" class="submit">Click to Add</button>
+         </form>
+
+          <% for(let i of contact_list){ %>
+            <div class="contact-details">
+               
+                 <p class="name-phone"> <%=i.name%></p>
+                 <p class="name-phone"> <%=i.phone%></p>
+                 <!-- <a href="/delete-button/<%= i.phone %>"><button id="delete" class="submit">delete</button></a> -->
+                 <a href="/delete-button/?id=<%=i._id %>">
+                    <button id="delete" class="submit">
+                        Delete
+                    </button>
+                </a>
+
+                </div>
+           
+            <%}%>
+      </div>
+       
+<script type="text/javascript" src="/js/home.js"></script>
+
+    </body>
+</html>

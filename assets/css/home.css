@@ -1,0 +1,86 @@
+body{  
+    margin: 0;
+}
+#page-heading{
+    /* border: 1px solid red; */
+    color: grey;
+    /* margin-top: 30px; */
+    font-size: 55px;
+    height: 100px;
+    text-align: center;
+}
+#contact-submit{
+    /* border: 1px solid cyan; */
+    width: 400px;
+    margin: auto;
+}
+.contact-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    background-color: darkslateblue;
+    /* border: 1px solid cyan; */
+    width: 400px;
+    border-radius: 3px;
+    margin: 1px;
+}
+p{
+    margin: 0;
+    color:white;
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    
+}
+
+   
+
+
+.contact-details:hover{
+    color:darkslateblue;
+    background-color:white;
+    border: 1px solid darkslateblue;
+}
+.contact-details:hover p{
+    color:darkslateblue;
+}
+input,.submit{
+    border: none;
+    padding: 10px;
+    text-align: center;
+    width: 130px;
+}
+input::placeholder{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.submit{
+    background-color: grey;
+    color: honeydew;
+    border-radius: 2px;
+    
+}
+.submit:hover{
+    background-color: honeydew;
+    color: grey;
+    border: 1px solid darkslateblue;
+}
+#delete{
+    display: none;
+    width: 80px;
+    /* padding-top: 10px; */
+    
+}
+.contact-details:hover #delete{
+    display: block;
+}
+
+#delete:hover{
+    background-color: silver;
+}
+a{
+    text-decoration: none;
+    padding: 7px;
+}
